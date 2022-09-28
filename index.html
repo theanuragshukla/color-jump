@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<script defer src="./script.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<div class="controls">
+			<div class="logo">Color Jump</div>
+			<div class="score" id="score">Score: <span class="scoreInt" id="scoreInt">0</span></div>
+		</div>
+		<canvas id="cnvs"></canvas>
+		<div id="clrs" class="clrs"></div>
+<div id="ctrls">
+		<div class="ctrl leftCtrl" id="leftCtrl"></div>
+		<div class="ctrl rightCtrl" id="rightCtrl"></div>
+	</div>	<div class="over" ondblclick="restart()" id="over">
+			<h1>Game Over</h1>
+			<br>
+			<h3>Score: <span class="scoreInt" id="scoreInt1">0</span></h3>
+			<br>
+			<br>
+			<br>
+			<h2 class="blink">Click twice to Restart</h2>
+		</div>
+	</body>
+</html>
