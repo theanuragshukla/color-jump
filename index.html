@@ -3,28 +3,46 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="style.css">
+		<script defer src="./classes.js"></script>
 		<script defer src="./script.js"></script>
 		<title></title>
 	</head>
 	<body>
 		<div class="controls">
 			<div class="logo">Color Jump</div>
-			<div class="score" id="score">Score: <span class="scoreInt" id="scoreInt">0</span></div>
 		</div>
-		<canvas id="cnvs"></canvas>
-		<div id="clrs" class="clrs"></div>
-<div id="ctrls">
-		<div class="ctrl leftCtrl" id="leftCtrl"></div>
-		<div class="ctrl rightCtrl" id="rightCtrl"></div>
-	</div>	<div class="over" ondblclick="restart()" id="over">
-			<h1>Game Over</h1>
-			<br>
-			<h3>Score: <span class="scoreInt" id="scoreInt1">0</span></h3>
-			<br>
-			<br>
-			<br>
-			<h2 class="blink">Click twice to Restart</h2>
+		<div class="cnvsWrapper" id="cnvsWrapper">
+			<div class="score hscore">HScore: <span id="hscoreInt">0</span></div>
+			<div class="score">Score: <span id="scoreInt">0</span></div>
+			<div class="help" id="help">
+				<div class="leftHelp"></div>
+				<div class="rightHelp"></div>
+				<div class="icon" onclick="startGame()">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+						<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+						<path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+					</svg>
+				</div>
+			</div>
+			<canvas id="cnvs"></canvas>
+			<!-- <div id="clrs" class="clrs"></div>-->	
+			<div id="ctrls">
+				<div class="ctrl leftCtrl" id="leftCtrl" onclick="switchColor(-1)"></div>
+				<div class="ctrl rightCtrl" id="rightCtrl" onclick="switchColor(1)"></div>
+			</div>
+			<div class="over"  id="over">
+				<h1>Game Over</h1>
+				<br>
+				<h3>Score: <span class="scoreInt" id="scoreInt1">0</span></h3>
+				<br>
+				<br>
+				<br>
+				<h2 class="blink" ondblclick="restart()">Click twice to Restart</h2>
+			</div>
 		</div>
 	</body>
 </html>
